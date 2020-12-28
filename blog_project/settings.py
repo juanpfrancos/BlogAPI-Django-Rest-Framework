@@ -98,12 +98,18 @@ WSGI_APPLICATION = 'blog_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+DATABASES={
+'default':{
+    'ENGINE':'django.db.backends.mysql',
+    'NAME':'products',
+    'USER':'juanpfrancos@drfprodcuts',
+    'PASSWORD':'JpSQLDB.1',
+    'HOST':'drfprodcuts.mysql.database.azure.com',
+    'PORT':'3306',
+    'OPTIONS':{
+        'sql_mode':'STRICT_ALL_TABLES',
+        },
+}}
 
 
 # Password validation
